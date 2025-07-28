@@ -20,6 +20,7 @@ Rice-Grain-Classification-using-CNN/
 ├── Rice Classifier Pesudo code .txt # Pseudocode of the rice classifier
 ├── app.py # Main Streamlit app script
 ├── rice-classifier-model-building.ipynb # Jupyter notebook for training the rice classifier model
+├── requirements.txt
 
 ## 🗃️ Dataset
 

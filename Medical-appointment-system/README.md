@@ -96,7 +96,7 @@ django-clinic-management/
 ├── manage.py             # Django management script
 ├── db.sqlite3           # SQLite database
 ├── clinic.log           # Application logs
-
+├──requirements.txt
 ```
 
 ## 🗄️ Database Models

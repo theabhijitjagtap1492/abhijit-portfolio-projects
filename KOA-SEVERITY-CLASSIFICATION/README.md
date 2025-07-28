@@ -14,9 +14,7 @@ This project leverages deep convolutional neural networks (CNNs) to automaticall
 
 ---
 
-KOA/
-│
-├── .venv/                # Virtual environment directory (not pushed to Git)
+KOA
 ├── app/                  # Contains main application logic (e.g., Streamlit or Flask app files)
 ├── assets/               # Static assets like images, icons, logos
 ├── src/                  # Source code: preprocessing, training, evaluation

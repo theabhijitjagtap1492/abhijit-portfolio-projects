@@ -14,6 +14,18 @@ This project leverages deep convolutional neural networks (CNNs) to automaticall
 
 ---
 
+KOA/
+│
+├── .venv/                # Virtual environment directory (not pushed to Git)
+├── app/                  # Contains main application logic (e.g., Streamlit or Flask app files)
+├── assets/               # Static assets like images, icons, logos
+├── src/                  # Source code: preprocessing, training, evaluation
+│
+├── app.py                # Main entry point script to run the application
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation (you’ll create this)
+
+
 ## 🩻 Osteoarthritis Severity - KL Score
 
 The **Kellgren and Lawrence (KL)** grading system is used to assess OA severity in five levels:
@@ -40,27 +52,4 @@ The **Kellgren and Lawrence (KL)** grading system is used to assess OA severity 
 
 ---
 
-## 📁 Directory Structure
 
-knee-osteoarthritis-analysis/
-│
-├── app.py                     # Main application entry point
-
-├── archive.zip                # Zipped archive of resources or data
-
-├── requirements.txt           # Python dependencies
-
-│
-├── assets/                    # Images, plots, or other visual resources
-
-│
-├── app/                       # Core application logic (routes, configs, etc.)
-
-│
-├── models/                    # Trained ML models or model-related scripts
-
-│
-├── dataset/                   # Raw or processed datasets
-
-│
-├── notebooks/                 # Jupyter notebooks for EDA, modeling, etc.

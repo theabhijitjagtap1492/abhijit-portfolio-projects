@@ -16,6 +16,7 @@ Resume-Matcher/
 ├── app.py # Streamlit UI script for running the app
 ├── matcher.py # Core resume and job description matching logic
 ├── prompts.py # Prompt templates used for LLM-based matching
+├── resume_matcher_requirements.txt
 
 ## 🛠️ Setup & Installation
 

@@ -11,7 +11,15 @@ This project aims to build an image classification system that can accurately cl
   - Perform hyperparameter tuning for optimization.
   - Deploy a Gradio-based UI for live image classification.
 
----
+## 📁 Project Directory Structure
+
+Rice-Grain-Classification-using-CNN/
+├── Application demo .png # Screenshot of the working application
+├── Flow Diagram.jpeg # Visual flow of the model or app architecture
+├── README.md # Project documentation
+├── Rice Classifier Pesudo code .txt # Pseudocode of the rice classifier
+├── app.py # Main Streamlit app script
+├── rice-classifier-model-building.ipynb # Jupyter notebook for training the rice classifier model
 
 ## 🗃️ Dataset
 

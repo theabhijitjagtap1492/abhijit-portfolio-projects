@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>My Schedule</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Booked At</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for appt in appointments %}
+    <tr>
+      <td>{{ appt.patient.get_full_name }}</td>
+      <td>{{ appt.time_slot.date }}</td>
+      <td>{{ appt.time_slot.start_time }} - {{ appt.time_slot.end_time }}</td>
+      <td>{{ appt.booking_time }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="4">No appointments yet.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %} 

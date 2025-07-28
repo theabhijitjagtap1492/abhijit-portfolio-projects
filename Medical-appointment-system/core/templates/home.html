@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center mt-5">
+  <h1 class="display-4 mb-3">Welcome to the Clinic Appointment System</h1>
+  <p class="lead mb-4">Book appointments with top doctors easily and securely. Manage your health with just a few clicks!</p>
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Find Doctors</h5>
+              <p class="card-text">Browse specialists and view their profiles to choose the right doctor for you.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Book & Reschedule</h5>
+              <p class="card-text">Book appointments instantly and reschedule them as needed, all online.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Secure & Simple</h5>
+              <p class="card-text">Your data is safe and your experience is seamless with our secure platform.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="{% url 'login' %}" class="btn btn-primary btn-lg me-2">Login</a>
+  <a href="{% url 'register' %}" class="btn btn-outline-success btn-lg">Register</a>
+</div>
+{% endblock %} 

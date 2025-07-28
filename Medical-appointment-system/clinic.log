@@ -1,0 +1,90 @@
+INFO 2025-06-29 17:36:05,003 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 17:36:45,492 autoreload C:\Users\Admin\Desktop\Projects\Dr\core\forms.py changed, reloading.
+INFO 2025-06-29 17:36:46,686 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 17:37:01,297 autoreload C:\Users\Admin\Desktop\Projects\Dr\core\forms.py changed, reloading.
+INFO 2025-06-29 17:37:02,304 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 17:37:28,445 autoreload C:\Users\Admin\Desktop\Projects\Dr\core\views.py changed, reloading.
+INFO 2025-06-29 17:37:29,345 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 17:37:49,135 autoreload C:\Users\Admin\Desktop\Projects\Dr\core\views.py changed, reloading.
+INFO 2025-06-29 17:37:50,210 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 17:37:57,010 autoreload C:\Users\Admin\Desktop\Projects\Dr\core\views.py changed, reloading.
+INFO 2025-06-29 17:37:57,796 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 17:39:21,310 autoreload C:\Users\Admin\Desktop\Projects\Dr\core\urls.py changed, reloading.
+INFO 2025-06-29 17:39:22,200 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 17:40:00,661 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 17:40:09,877 views User login: patient1 (role: patient)
+INFO 2025-06-29 17:40:09,889 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-06-29 17:40:09,938 basehttp "GET /dashboard/patient/ HTTP/1.1" 200 1305
+INFO 2025-06-29 17:40:16,039 basehttp "GET /reschedule/1/ HTTP/1.1" 200 2036
+INFO 2025-06-29 17:40:22,448 basehttp "GET /dashboard/patient/ HTTP/1.1" 200 1305
+INFO 2025-06-29 17:40:23,307 basehttp "GET /doctors/ HTTP/1.1" 200 1568
+INFO 2025-06-29 17:48:41,730 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-06-29 17:48:41,883 basehttp "GET /dashboard/patient/ HTTP/1.1" 200 1305
+INFO 2025-06-29 17:48:44,637 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-06-29 17:48:44,637 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 17:48:57,512 basehttp "POST /login/ HTTP/1.1" 200 1707
+INFO 2025-06-29 17:51:42,338 views User login: patient1 (role: patient)
+INFO 2025-06-29 17:51:42,349 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-06-29 17:51:42,370 basehttp "GET /dashboard/patient/ HTTP/1.1" 200 1305
+INFO 2025-06-29 17:51:45,247 basehttp "GET /doctors/ HTTP/1.1" 200 1568
+INFO 2025-06-29 17:55:48,648 basehttp "GET /doctors/ HTTP/1.1" 302 0
+INFO 2025-06-29 17:55:48,664 basehttp "GET /login/?next=/doctors/ HTTP/1.1" 200 1547
+INFO 2025-06-29 17:56:02,133 views User login: patient1 (role: patient)
+INFO 2025-06-29 17:56:02,145 basehttp "POST /login/?next=/doctors/ HTTP/1.1" 302 0
+INFO 2025-06-29 17:56:02,157 basehttp "GET /dashboard/patient/ HTTP/1.1" 200 1110
+INFO 2025-06-29 17:56:03,659 basehttp "GET /doctors/ HTTP/1.1" 200 1570
+INFO 2025-06-29 17:56:06,240 basehttp "GET /book/1/ HTTP/1.1" 200 2540
+INFO 2025-06-29 17:56:23,079 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-06-29 17:56:23,091 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:07:28,788 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 18:07:36,536 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-06-29 18:07:36,568 basehttp "GET /login/ HTTP/1.1" 200 1547
+WARNING 2025-06-29 18:07:36,692 log Not Found: /favicon.ico
+WARNING 2025-06-29 18:07:36,693 basehttp "GET /favicon.ico HTTP/1.1" 404 4791
+INFO 2025-06-29 18:07:50,473 views User login: patient1 (role: patient)
+INFO 2025-06-29 18:07:50,478 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-06-29 18:07:50,486 basehttp "GET /dashboard/patient/ HTTP/1.1" 200 1110
+INFO 2025-06-29 18:07:51,993 basehttp "GET /doctors/ HTTP/1.1" 200 1570
+INFO 2025-06-29 18:07:54,255 basehttp "GET /book/1/ HTTP/1.1" 200 2540
+INFO 2025-06-29 18:07:57,479 views Appointment booked: patient=patient1, doctor=doctor1, slot=Dr. John Doe (Cardiologist) - 2025-07-01 11:00:00-12:00:00
+INFO 2025-06-29 18:07:57,492 basehttp "POST /book/1/ HTTP/1.1" 302 0
+INFO 2025-06-29 18:07:57,510 basehttp "GET /dashboard/patient/ HTTP/1.1" 200 1302
+INFO 2025-06-29 18:08:01,272 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-06-29 18:08:01,276 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:08:17,548 views User login: doctor1 (role: doctor)
+INFO 2025-06-29 18:08:17,553 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-06-29 18:08:17,562 basehttp "GET /dashboard/doctor/ HTTP/1.1" 200 1102
+INFO 2025-06-29 18:08:34,036 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-06-29 18:08:34,041 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:11:19,658 autoreload C:\Users\Admin\Desktop\Projects\Dr\manage.py changed, reloading.
+INFO 2025-06-29 18:11:22,738 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 18:12:23,274 autoreload C:\Users\Admin\Desktop\Projects\Dr\core\views.py changed, reloading.
+INFO 2025-06-29 18:12:23,791 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 18:13:48,576 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:13:49,087 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:14:00,353 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:14:00,663 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:14:00,874 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:14:01,064 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:14:01,280 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:14:56,529 basehttp "GET / HTTP/1.1" 200 2346
+INFO 2025-06-29 18:15:16,010 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 18:15:20,880 basehttp "GET / HTTP/1.1" 200 2346
+WARNING 2025-06-29 18:15:20,998 log Not Found: /favicon.ico
+WARNING 2025-06-29 18:15:20,998 basehttp "GET /favicon.ico HTTP/1.1" 404 4791
+INFO 2025-06-29 18:15:42,484 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:15:45,254 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:15:46,229 basehttp "GET /register/ HTTP/1.1" 200 2546
+INFO 2025-06-29 18:15:47,453 basehttp "GET /register/ HTTP/1.1" 200 2546
+INFO 2025-06-29 18:47:25,536 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 18:47:29,511 basehttp "GET / HTTP/1.1" 200 2346
+WARNING 2025-06-29 18:47:29,714 log Not Found: /favicon.ico
+WARNING 2025-06-29 18:47:29,714 basehttp "GET /favicon.ico HTTP/1.1" 404 4791
+INFO 2025-06-29 18:47:32,616 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:47:37,360 basehttp "GET /login/ HTTP/1.1" 200 1547
+INFO 2025-06-29 18:49:25,269 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 18:49:27,259 basehttp "GET / HTTP/1.1" 200 2346
+INFO 2025-06-29 18:49:51,011 autoreload C:\Users\Admin\Desktop\Projects\Dr\manage.py changed, reloading.
+INFO 2025-06-29 18:49:51,989 autoreload Watching for file changes with StatReloader
+INFO 2025-06-29 18:49:58,933 autoreload C:\Users\Admin\Desktop\Projects\Dr\core\views.py changed, reloading.
+INFO 2025-06-29 18:50:01,018 autoreload Watching for file changes with StatReloader

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Book Appointment with {{ doctor.user.get_full_name }}</h2>
+<p>Specialization: {{ doctor.specialization }}</p>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Book</button>
+</form>
+<h4 class="mt-4">Available Slots</h4>
+<ul>
+  {% for slot in available_slots %}
+    <li>{{ slot.date }} {{ slot.start_time }} - {{ slot.end_time }}</li>
+  {% empty %}
+    <li>No available slots.</li>
+  {% endfor %}
+</ul>
+{% endblock %} 

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>My Appointments</h2>
+<a href="{% url 'doctor_list' %}" class="btn btn-primary mb-3">Book New Appointment</a>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Doctor</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Booked At</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for appt in appointments %}
+    <tr>
+      <td>{{ appt.doctor }}</td>
+      <td>{{ appt.time_slot.date }}</td>
+      <td>{{ appt.time_slot.start_time }} - {{ appt.time_slot.end_time }}</td>
+      <td>{{ appt.booking_time }}</td>
+      <td><a href="{% url 'reschedule_appointment' appt.id %}" class="btn btn-warning btn-sm">Reschedule</a></td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="5">No appointments yet.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %} 

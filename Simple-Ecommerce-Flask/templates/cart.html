@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - E-Commerce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body { background: #f8fafc; }
+    .cart-card { border-radius: 18px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+    .cart-item { border-radius: 12px; margin-bottom: 1rem; background: #fff; box-shadow: 0 1px 6px rgba(0,0,0,0.04); }
+    .cart-item img { border-radius: 8px; }
+    .btn-danger, .btn-primary { border-radius: 8px; font-weight: 600; }
+    .order-summary { border-radius: 12px; background: #f1f5f9; }
+    .navbar { border-radius: 0 0 18px 18px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4 shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="/">Simple E-Commerce</a>
+      <div class="navbar-nav ms-auto">
+        <a class="btn btn-outline-light me-2" href="/">🏠 Home</a>
+        <a class="btn btn-outline-light" href="/orders">📋 Order History</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-4">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ 'success' if category == 'success' else 'warning' if category == 'warning' else 'info' }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card cart-card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title mb-4 fw-bold text-primary">Your Cart</h2>
+            {% if cart %}
+              <ul class="list-group mb-3">
+                {% for item in cart %}
+                  <li class="list-group-item d-flex justify-content-between align-items-center cart-item">
+                    <div class="d-flex align-items-center">
+                      {% if item.product|lower == 'laptop' %}
+                        <img src="{{ url_for('static', filename='Laptop.png') }}" alt="Laptop" style="height:40px;width:60px;object-fit:cover;margin-right:10px;">
+                      {% elif item.product|lower == 'mouse' %}
+                        <img src="{{ url_for('static', filename='Mouse.png') }}" alt="Mouse" style="height:40px;width:60px;object-fit:cover;margin-right:10px;">
+                      {% elif item.product|lower == 'keyboard' %}
+                        <img src="{{ url_for('static', filename='Key.png') }}" alt="Keyboard" style="height:40px;width:60px;object-fit:cover;margin-right:10px;">
+                      {% elif item.product|lower == 'pendrive' %}
+                        <img src="{{ url_for('static', filename='Pendrive.png') }}" alt="Pendrive" style="height:40px;width:60px;object-fit:cover;margin-right:10px;">
+                      {% else %}
+                        <img src="https://via.placeholder.com/60x40?text=Product" alt="Product" style="height:40px;width:60px;object-fit:cover;margin-right:10px;">
+                      {% endif %}
+                      <div>
+                        <span class="fw-bold text-primary">{{ item.product }}</span>
+                        <br>
+                        <small class="text-muted">
+                          {% if item.product|lower == 'laptop' %}
+                            ₹50,000 × {{ item.quantity }} = ₹{{ 50000 * item.quantity }}
+                          {% elif item.product|lower == 'mouse' %}
+                            ₹500 × {{ item.quantity }} = ₹{{ 500 * item.quantity }}
+                          {% elif item.product|lower == 'keyboard' %}
+                            ₹1,500 × {{ item.quantity }} = ₹{{ 1500 * item.quantity }}
+                          {% elif item.product|lower == 'pendrive' %}
+                            ₹800 × {{ item.quantity }} = ₹{{ 800 * item.quantity }}
+                          {% endif %}
+                        </small>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <span class="badge bg-primary rounded-pill me-2">Qty: {{ item.quantity }}</span>
+                      <form method="POST" action="/delete_from_cart/{{ loop.index0 }}" style="display:inline;">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                      </form>
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+              <div class="card order-summary p-3 mb-2">
+                <h5 class="card-title fw-bold">Order Summary</h5>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Total Items:</span>
+                  <span>{{ cart|length }}</span>
+                </div>
+                <form method="POST" action="/checkout">
+                  <button type="submit" class="btn btn-success w-100 mt-2">Proceed to Checkout</button>
+                </form>
+              </div>
+            {% else %}
+              <p class="text-muted">Your cart is empty.</p>
+              <a href="/" class="btn btn-primary">Continue Shopping</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

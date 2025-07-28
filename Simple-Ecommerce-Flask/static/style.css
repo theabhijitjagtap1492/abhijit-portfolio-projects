@@ -1,0 +1,105 @@
+/* Custom styles for the E-Commerce Cart page */
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.list-group-item:hover {
+  box-shadow: 0 2px 8px rgba(13,110,253,0.08);
+}
+
+.btn-danger.btn-sm {
+  font-size: 0.9rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.badge.bg-primary {
+  font-size: 1rem;
+  padding: 0.5em 0.8em;
+  background: linear-gradient(90deg, #0d6efd 60%, #0a58ca 100%);
+}
+
+.text-muted {
+  font-size: 1.1rem;
+}
+
+/* Home Page Product Card Enhancements */
+.card.h-100 {
+  transition: transform 0.15s, box-shadow 0.15s;
+  border-radius: 1rem;
+}
+.card.h-100:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(13,110,253,0.10);
+}
+.card-title {
+  font-size: 1.25rem;
+  color: #0d6efd;
+}
+.btn-primary.w-100 {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.input-group-text {
+  background: #e9ecef;
+  font-weight: 500;
+}
+
+/* Orders Table Enhancements */
+.table {
+  background: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.table th, .table td {
+  vertical-align: middle;
+  font-size: 1.05rem;
+}
+.table-primary th {
+  background: linear-gradient(90deg, #0d6efd 60%, #0a58ca 100%);
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f6f9ff;
+}
+
+/* General Layout Improvements */
+.container {
+  margin-bottom: 2rem;
+}
+
+h2, .card-title {
+  letter-spacing: 0.5px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .card, .card.h-100 {
+    border-radius: 0.5rem;
+  }
+  .table {
+    font-size: 0.98rem;
+  }
+} 

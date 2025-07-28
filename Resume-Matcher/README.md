@@ -10,6 +10,13 @@ This is a Streamlit web application that helps you match a resume to a job descr
 - **Fit for Role**: Provides a simple "Yes" or "No" recommendation based on the score.
 - **File Upload**: Supports uploading both the resume and job description as PDF files.
 
+## 📁 Project Directory Structure
+Resume-Matcher/
+├── README.md # Project overview and usage instructions
+├── app.py # Streamlit UI script for running the app
+├── matcher.py # Core resume and job description matching logic
+├── prompts.py # Prompt templates used for LLM-based matching
+
 ## 🛠️ Setup & Installation
 
 To run this project locally, please follow these steps:
